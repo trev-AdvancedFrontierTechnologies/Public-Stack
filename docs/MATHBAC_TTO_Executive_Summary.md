@@ -4,10 +4,12 @@
 **PI**: Trevor Yohn  
 **Date**: 2026-06-16
 
-**Problem**: Agentic systems lack rigorous mathematical foundations for scalable science discovery and rapid force structure adaptation.
+**Problem**: Agentic AI lacks rigorous mathematical foundations for scalable science discovery and rapid force structure adaptation.
 
-**Solution**: SMILEQT 21-agent discrete non-manifold lattice + Paladin governance + T.R.E.Y. OMEGA physics engine (OpenFOAM/GMSH stubs).
+**Solution**: SMILEQT 21-agent discrete non-manifold lattice + Paladin governance + T.R.E.Y. OMEGA physics engine (OpenFOAM/GMSH prototypes).
 
-**Evidence**: See `docker/docker-compose.demo.yml` and prototype benchmarks in this repo.
+**Evidence**: Docker demo skeletons and benchmarks in this repo.
 
-**Impact**: Prototype-backed path to explainable agent collectives and sovereign edge deployment.
+**Impact**: Explainable agent collectives + sovereign edge deployment for defense and healthcare verticals.
+
+**Risk Boundary**: Prototype-backed only. Full validation post-award.
