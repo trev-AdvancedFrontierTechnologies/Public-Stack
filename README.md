@@ -1,20 +1,11 @@
-# AFT Public Software
+# aft-public-software
 
-Public-safe software examples, demo APIs, website source, and deployment skeletons for Advanced Frontier Technologies.
+Public-safe software examples, architecture skeletons, and demonstration interfaces for Advanced Frontier Technologies (AFT).
 
-## Company Identifiers
+**Focus**: Prototype-backed sovereign AI/HPC components (SMILEQT lattice, T.R.E.Y. OMEGA, Paladin governance).
 
-Advanced Frontier Technologies  
-UEI: W2MEEUJACRJ3  
-CAGE Code: 1ZV02
+Live relevance:
+- SuperMicro JumpStart evaluation configs
+- DARPA MATHBAC (due June 18) & TTO BAA (due June 22) alignment
 
-## Public Posture
-
-Prototype-backed. Validation-first. Evidence-controlled.
-
-## Run Locally
-
-docker compose -f docker/docker-compose.demo.yml up -d --build
-
-Site: http://127.0.0.1:8098  
-API: http://127.0.0.1:8798
+See `docs/` for executive summaries and procurement guidance.
