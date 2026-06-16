@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AFT Whitepapers | Advanced Frontier Technologies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Public-safe whitepapers and technical briefs from Advanced Frontier Technologies.">
+  <style>
+    :root {
+      --bg: #070b14;
+      --panel: #101827;
+      --text: #eef4ff;
+      --muted: #a8b3c7;
+      --line: #263247;
+      --accent: #67e8f9;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #14213d 0, var(--bg) 45%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header, main, footer {
+      max-width: 1040px;
+      margin: auto;
+      padding: 32px 20px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 18px;
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 16px;
+      font-size: 14px;
+    }
+    nav a:hover { color: var(--accent); }
+    h1 {
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: 1.04;
+      margin: 48px 0 18px;
+    }
+    p { color: var(--muted); font-size: 18px; }
+    .card {
+      border: 1px solid var(--line);
+      background: rgba(16, 24, 39, 0.78);
+      border-radius: 18px;
+      padding: 22px;
+      margin: 22px 0;
+    }
+    .card h2 { margin-top: 0; }
+    .button {
+      display: inline-block;
+      border: 1px solid var(--accent);
+      color: var(--bg);
+      background: var(--accent);
+      padding: 10px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+    .tag {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 10px;
+      color: var(--muted);
+      font-size: 13px;
+      margin: 4px 6px 4px 0;
+    }
+    .notice {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      border-radius: 18px;
+      padding: 18px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div><strong>Advanced Frontier Technologies</strong></div>
+      <div>
+        <a href="/">Home</a>
+        <a href="/whitepapers/">Whitepapers</a>
+        <a href="/#contact">Contact</a>
+      </div>
+    </nav>
+
+    <h1>Whitepapers & Technical Briefs</h1>
+    <p>
+      Public-safe concept papers, technical briefs, and proposal summaries from Advanced Frontier Technologies.
+    </p>
+  </header>
+
+  <main>
+    <div class="notice">
+      Materials in this section are public-safe summaries. They are prototype-backed, validation-first,
+      and evidence-controlled. They do not claim certified life-safety readiness, clinical readiness,
+      procurement approval, production readiness, patent-secured status, or government endorsement unless
+      separately verified in an authorized written record.
+    </div>
+
+    <section class="card">
+      <h2>AFT Sovereign Agentic Lattice for Defense Science Discovery</h2>
+      <p>
+        A public-safe executive concept brief describing AFT’s proposed SMILEQT Sovereign Lattice Runtime,
+        Paladin Governance layer, and T.R.E.Y. OMEGA simulation approach for DARPA-facing research pathways.
+      </p>
+      <div>
+        <span class="tag">Agentic AI</span>
+        <span class="tag">Governance</span>
+        <span class="tag">Simulation</span>
+        <span class="tag">DARPA-facing concept</span>
+      </div>
+      <a class="button" href="/whitepapers/aft-sovereign-agentic-lattice-darpa-concept.html">Read brief</a>
+    </section>
+
+    <section class="card">
+      <h2>Additional Whitepapers</h2>
+      <p>
+        Additional public-safe technical briefs will be added here as they are reviewed and cleared for public release.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Advanced Frontier Technologies · UEI: W2MEEUJACRJ3 · CAGE: 1ZV02. All rights reserved.
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>
