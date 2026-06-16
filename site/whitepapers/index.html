@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>AFT Whitepapers | Advanced Frontier Technologies</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Public-safe whitepapers and technical briefs from Advanced Frontier Technologies.">
+  <meta name="description" content="Company-wide public-safe whitepapers and technical briefs from Advanced Frontier Technologies.">
   <style>
     :root {
       --bg: #070b14;
@@ -23,7 +23,7 @@
       line-height: 1.6;
     }
     header, main, footer {
-      max-width: 1040px;
+      max-width: 1080px;
       margin: auto;
       padding: 32px 20px;
     }
@@ -34,6 +34,7 @@
       align-items: center;
       border-bottom: 1px solid var(--line);
       padding-bottom: 18px;
+      flex-wrap: wrap;
     }
     nav a {
       color: var(--muted);
@@ -47,15 +48,20 @@
       line-height: 1.04;
       margin: 48px 0 18px;
     }
+    h2 { margin-top: 0; }
     p { color: var(--muted); font-size: 18px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
     .card {
       border: 1px solid var(--line);
       background: rgba(16, 24, 39, 0.78);
       border-radius: 18px;
       padding: 22px;
-      margin: 22px 0;
     }
-    .card h2 { margin-top: 0; }
     .button {
       display: inline-block;
       border: 1px solid var(--accent);
@@ -83,6 +89,7 @@
       padding: 18px;
       color: var(--muted);
       font-size: 15px;
+      margin: 24px 0;
     }
     footer {
       border-top: 1px solid var(--line);
@@ -98,13 +105,16 @@
       <div>
         <a href="/">Home</a>
         <a href="/whitepapers/">Whitepapers</a>
+        <a href="/#platforms">Platforms</a>
         <a href="/#contact">Contact</a>
       </div>
     </nav>
 
-    <h1>Whitepapers & Technical Briefs</h1>
+    <h1>Company Whitepapers & Technical Briefs</h1>
     <p>
-      Public-safe concept papers, technical briefs, and proposal summaries from Advanced Frontier Technologies.
+      Public-safe papers, concept briefs, and technical notes covering Advanced Frontier Technologies'
+      work across sovereign systems, governed agentic AI, simulation, evidence packaging, edge deployment,
+      emergency response concepts, healthcare-adjacent modeling, and partner discovery.
     </p>
   </header>
 
@@ -116,27 +126,64 @@
       separately verified in an authorized written record.
     </div>
 
-    <section class="card">
-      <h2>AFT Sovereign Agentic Lattice for Defense Science Discovery</h2>
-      <p>
-        A public-safe executive concept brief describing AFT’s proposed SMILEQT Sovereign Lattice Runtime,
-        Paladin Governance layer, and T.R.E.Y. OMEGA simulation approach for DARPA-facing research pathways.
-      </p>
-      <div>
-        <span class="tag">Agentic AI</span>
-        <span class="tag">Governance</span>
-        <span class="tag">Simulation</span>
-        <span class="tag">DARPA-facing concept</span>
-      </div>
-      <a class="button" href="/whitepapers/aft-sovereign-agentic-lattice-darpa-concept.html">Read brief</a>
-    </section>
+    <div class="grid">
+      <section class="card">
+        <h2>Sovereign Agentic Lattice</h2>
+        <p>
+          A company-wide concept brief describing AFT's SMILEQT Sovereign Lattice Runtime,
+          Paladin Governance, T.R.E.Y. OMEGA simulation layer, and evidence-controlled
+          multi-agent architecture.
+        </p>
+        <div>
+          <span class="tag">Agentic AI</span>
+          <span class="tag">Governance</span>
+          <span class="tag">Simulation</span>
+        </div>
+        <a class="button" href="/whitepapers/aft-sovereign-agentic-lattice.html">Read brief</a>
+      </section>
 
-    <section class="card">
-      <h2>Additional Whitepapers</h2>
-      <p>
-        Additional public-safe technical briefs will be added here as they are reviewed and cleared for public release.
-      </p>
-    </section>
+      <section class="card">
+        <h2>Paladin Governance</h2>
+        <p>
+          Governance, priority handling, safety boundaries, state-machine oversight, and evidence controls
+          for high-consequence agentic and automation workflows.
+        </p>
+        <div>
+          <span class="tag">Governance</span>
+          <span class="tag">Safety</span>
+          <span class="tag">Evidence</span>
+        </div>
+        <a class="button" href="/whitepapers/paladin-governance.html">Read brief</a>
+      </section>
+
+      <section class="card">
+        <h2>Flying Triage Concept</h2>
+        <p>
+          A public-safe overview of AFT's emergency-response and digital-twin concept direction for
+          triage support, scene understanding, and controlled validation pathways.
+        </p>
+        <div>
+          <span class="tag">Emergency Response</span>
+          <span class="tag">Digital Twin</span>
+          <span class="tag">Validation</span>
+        </div>
+        <a class="button" href="/whitepapers/flying-triage-concept.html">Read brief</a>
+      </section>
+
+      <section class="card">
+        <h2>Evidence-Controlled Deployment</h2>
+        <p>
+          A technical note on AFT's approach to reproducible Docker packaging, public-safe repositories,
+          service manifests, ProofPackets, and validation-first transition planning.
+        </p>
+        <div>
+          <span class="tag">Deployment</span>
+          <span class="tag">ProofPacket</span>
+          <span class="tag">Reproducibility</span>
+        </div>
+        <a class="button" href="/whitepapers/evidence-controlled-deployment.html">Read brief</a>
+      </section>
+    </div>
   </main>
 
   <footer>
