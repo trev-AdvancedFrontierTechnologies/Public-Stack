@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Evidence-Controlled Deployment | Advanced Frontier Technologies</title>
+<title>AFT Docker/MCP Runtime Skeleton | Advanced Frontier Technologies</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="AFT’s approach to Docker packaging, service manifests, checksums, ProofPackets, validation status, and public/private evidence separation.">
+<meta name="description" content="Technical overview of the Docker/MCP routing model, service layout, local deployment structure, and reproducibility goals.">
 
 <style>
 :root{--bg:#070b14;--panel:#101827;--text:#eef4ff;--muted:#a8b3c7;--line:#263247;--accent:#67e8f9}
@@ -35,10 +35,10 @@ footer{border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 <div><strong>Advanced Frontier Technologies</strong></div>
 <div><a href="/">Home</a><a href="/whitepapers/">Whitepapers</a><a href="/#contact">Contact</a></div>
 </nav>
-<h1>Evidence-Controlled Deployment</h1>
-<p>AFT’s approach to Docker packaging, service manifests, checksums, ProofPackets, validation status, and public/private evidence separation.</p>
+<h1>AFT Docker/MCP Runtime Skeleton</h1>
+<p>Technical overview of the Docker/MCP routing model, service layout, local deployment structure, and reproducibility goals.</p>
 <div class="meta">
-<p><strong>Category:</strong> Core Architecture</p>
+<p><strong>Category:</strong> Public Software &amp; DevOps</p>
 <p><strong>Organization:</strong> Advanced Frontier Technologies</p>
 <p><strong>Public posture:</strong> Prototype-backed · Validation-first · Evidence-controlled</p>
 <p><strong>Entity identifiers:</strong> UEI <code>W2MEEUJACRJ3</code> · CAGE <code>1ZV02</code></p>
@@ -55,12 +55,12 @@ would require independent validation, cybersecurity review, contractual authoriz
 
 <h2>Executive Summary</h2>
 <p>
-Evidence-Controlled Deployment is part of AFT's company-wide whitepaper library. Its purpose is to define the technical spine of AFT&#x27;s company-wide architecture
+AFT Docker/MCP Runtime Skeleton is part of AFT's company-wide whitepaper library. Its purpose is to explain the public-safe software, documentation, and deployment practices around AFT&#x27;s repository and site
 while preserving a clear boundary between public demonstrations, private diligence materials,
 prototype evidence, and future validation work.
 </p>
 <p>
-The intended audience includes technical reviewers, partners, integrators, and diligence teams. This paper is written as a public-safe summary and
+The intended audience includes developers, open-source reviewers, partners, and technical diligence teams. This paper is written as a public-safe summary and
 should be read as a planning, architecture, and partner-discovery artifact rather than as a
 certification, procurement, or deployment claim.
 </p>
@@ -82,7 +82,7 @@ examples, controlled language, and traceability across agentic, simulation, gove
 deployment workflows.
 </p>
 <ul>
-<li>Structured architecture review.</li><li>Runtime boundary definition.</li><li>Evidence mapping.</li><li>Controlled prototype iteration.</li>
+<li>Github workflow hygiene.</li><li>Dockerized examples.</li><li>Public-safety checks.</li><li>Release boundary review.</li>
 <li>Public/private evidence separation.</li>
 <li>Clear distinction between demonstration, pilot, validation, and certified deployment.</li>
 </ul>

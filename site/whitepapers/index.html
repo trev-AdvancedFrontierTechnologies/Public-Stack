@@ -1,194 +1,409 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>AFT Whitepapers | Advanced Frontier Technologies</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Company-wide public-safe whitepapers and technical briefs from Advanced Frontier Technologies.">
-  <style>
-    :root {
-      --bg: #070b14;
-      --panel: #101827;
-      --text: #eef4ff;
-      --muted: #a8b3c7;
-      --line: #263247;
-      --accent: #67e8f9;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: radial-gradient(circle at top, #14213d 0, var(--bg) 45%);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    header, main, footer {
-      max-width: 1080px;
-      margin: auto;
-      padding: 32px 20px;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      align-items: center;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 18px;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      margin-left: 16px;
-      font-size: 14px;
-    }
-    nav a:hover { color: var(--accent); }
-    h1 {
-      font-size: clamp(36px, 6vw, 64px);
-      line-height: 1.04;
-      margin: 48px 0 18px;
-    }
-    h2 { margin-top: 0; }
-    p { color: var(--muted); font-size: 18px; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 18px;
-      margin-top: 28px;
-    }
-    .card {
-      border: 1px solid var(--line);
-      background: rgba(16, 24, 39, 0.78);
-      border-radius: 18px;
-      padding: 22px;
-    }
-    .button {
-      display: inline-block;
-      border: 1px solid var(--accent);
-      color: var(--bg);
-      background: var(--accent);
-      padding: 10px 16px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      margin-top: 8px;
-    }
-    .tag {
-      display: inline-block;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 5px 10px;
-      color: var(--muted);
-      font-size: 13px;
-      margin: 4px 6px 4px 0;
-    }
-    .notice {
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.04);
-      border-radius: 18px;
-      padding: 18px;
-      color: var(--muted);
-      font-size: 15px;
-      margin: 24px 0;
-    }
-    footer {
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 14px;
-    }
-  </style>
+<meta charset="utf-8">
+<title>AFT Whitepapers | Advanced Frontier Technologies</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Company-wide public-safe whitepapers and technical briefs from Advanced Frontier Technologies.">
+
+<style>
+:root{--bg:#070b14;--panel:#101827;--text:#eef4ff;--muted:#a8b3c7;--line:#263247;--accent:#67e8f9}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#070b14;color:var(--text);line-height:1.65}
+header,main,footer{max-width:980px;margin:auto;padding:32px 20px}
+nav{display:flex;justify-content:space-between;gap:16px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-size:14px}
+nav a:hover{color:var(--accent)}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.06;margin:42px 0 14px}
+h2{margin-top:42px;border-top:1px solid var(--line);padding-top:26px}
+p,li{color:var(--muted);font-size:17px}
+strong{color:var(--text)}
+.meta,.notice{border:1px solid var(--line);background:rgba(16,24,39,.78);border-radius:18px;padding:20px;margin:24px 0}
+.notice{background:rgba(255,255,255,.04);font-size:15px;color:var(--muted)}
+code{color:var(--accent);background:rgba(255,255,255,.05);padding:2px 6px;border-radius:6px}
+.button{display:inline-block;border:1px solid var(--accent);color:#07111f;background:var(--accent);padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:26px}
+.card{border:1px solid var(--line);background:rgba(16,24,39,.78);border-radius:18px;padding:20px}
+.tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:5px 10px;color:var(--muted);font-size:13px;margin:4px 6px 4px 0}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+</style>
+
 </head>
 <body>
-  <header>
-    <nav>
-      <div><strong>Advanced Frontier Technologies</strong></div>
-      <div>
-        <a href="/">Home</a>
-        <a href="/whitepapers/">Whitepapers</a>
-        <a href="/#platforms">Platforms</a>
-        <a href="/#contact">Contact</a>
-      </div>
-    </nav>
+<header>
+<nav>
+<div><strong>Advanced Frontier Technologies</strong></div>
+<div><a href="/">Home</a><a href="/whitepapers/">Whitepapers</a><a href="/#platforms">Platforms</a><a href="/#contact">Contact</a></div>
+</nav>
+<h1>Company Whitepapers & Technical Briefs</h1>
+<p>
+Public-safe papers, concept briefs, and technical notes covering Advanced Frontier Technologies'
+work across sovereign systems, governed agentic AI, simulation, evidence packaging, edge deployment,
+emergency-response concepts, healthcare-adjacent modeling, partner discovery, security, and transition planning.
+</p>
+<div class="meta">
+<p><strong>Library size:</strong> 51 public-safe whitepaper pages</p>
+<p><strong>Posture:</strong> Prototype-backed · Validation-first · Evidence-controlled</p>
+<p><strong>Entity identifiers:</strong> UEI <code>W2MEEUJACRJ3</code> · CAGE <code>1ZV02</code></p>
+</div>
+</header>
+<main>
+<div class="notice">
+These materials are public-safe summaries. They do not claim certified life-safety readiness, clinical readiness,
+procurement approval, production readiness, patent-secured status, government endorsement, operational validation,
+FedRAMP authorization, or authority to operate.
+</div>
 
-    <h1>Company Whitepapers & Technical Briefs</h1>
-    <p>
-      Public-safe papers, concept briefs, and technical notes covering Advanced Frontier Technologies'
-      work across sovereign systems, governed agentic AI, simulation, evidence packaging, edge deployment,
-      emergency response concepts, healthcare-adjacent modeling, and partner discovery.
-    </p>
-  </header>
+<h2>Core Architecture</h2>
+<div class="grid">
 
-  <main>
-    <div class="notice">
-      Materials in this section are public-safe summaries. They are prototype-backed, validation-first,
-      and evidence-controlled. They do not claim certified life-safety readiness, clinical readiness,
-      procurement approval, production readiness, patent-secured status, or government endorsement unless
-      separately verified in an authorized written record.
-    </div>
+<section class="card">
+<h3>AFT Sovereign Agentic Lattice</h3>
+<p>Governed 21-agent lattice architecture for structured multi-agent collaboration, state tracking, simulation linkage, and evidence-controlled reasoning.</p>
+<a class="button" href="/whitepapers/aft-sovereign-agentic-lattice.html">Read paper</a>
+</section>
 
-    <div class="grid">
-      <section class="card">
-        <h2>Sovereign Agentic Lattice</h2>
-        <p>
-          A company-wide concept brief describing AFT's SMILEQT Sovereign Lattice Runtime,
-          Paladin Governance, T.R.E.Y. OMEGA simulation layer, and evidence-controlled
-          multi-agent architecture.
-        </p>
-        <div>
-          <span class="tag">Agentic AI</span>
-          <span class="tag">Governance</span>
-          <span class="tag">Simulation</span>
-        </div>
-        <a class="button" href="/whitepapers/aft-sovereign-agentic-lattice.html">Read brief</a>
-      </section>
+<section class="card">
+<h3>SMILEQT Sovereign Lattice Runtime</h3>
+<p>Runtime design for discrete lattice-based agent orchestration, role separation, agent communication, and traceable collaboration.</p>
+<a class="button" href="/whitepapers/smileqt-sovereign-lattice-runtime.html">Read paper</a>
+</section>
 
-      <section class="card">
-        <h2>Paladin Governance</h2>
-        <p>
-          Governance, priority handling, safety boundaries, state-machine oversight, and evidence controls
-          for high-consequence agentic and automation workflows.
-        </p>
-        <div>
-          <span class="tag">Governance</span>
-          <span class="tag">Safety</span>
-          <span class="tag">Evidence</span>
-        </div>
-        <a class="button" href="/whitepapers/paladin-governance.html">Read brief</a>
-      </section>
+<section class="card">
+<h3>Paladin Governance Runtime</h3>
+<p>Governance layer for priority handling, claim control, validation boundaries, safety posture, evidence review, and state-machine oversight.</p>
+<a class="button" href="/whitepapers/paladin-governance-runtime.html">Read paper</a>
+</section>
 
-      <section class="card">
-        <h2>Flying Triage Concept</h2>
-        <p>
-          A public-safe overview of AFT's emergency-response and digital-twin concept direction for
-          triage support, scene understanding, and controlled validation pathways.
-        </p>
-        <div>
-          <span class="tag">Emergency Response</span>
-          <span class="tag">Digital Twin</span>
-          <span class="tag">Validation</span>
-        </div>
-        <a class="button" href="/whitepapers/flying-triage-concept.html">Read brief</a>
-      </section>
+<section class="card">
+<h3>BrainV3 Cause-Effect Reasoning</h3>
+<p>Causal reasoning framework for hypothesis tracking, system-state interpretation, principle extraction, and evidence-linked reasoning.</p>
+<a class="button" href="/whitepapers/brainv3-cause-effect-reasoning.html">Read paper</a>
+</section>
 
-      <section class="card">
-        <h2>Evidence-Controlled Deployment</h2>
-        <p>
-          A technical note on AFT's approach to reproducible Docker packaging, public-safe repositories,
-          service manifests, ProofPackets, and validation-first transition planning.
-        </p>
-        <div>
-          <span class="tag">Deployment</span>
-          <span class="tag">ProofPacket</span>
-          <span class="tag">Reproducibility</span>
-        </div>
-        <a class="button" href="/whitepapers/evidence-controlled-deployment.html">Read brief</a>
-      </section>
-    </div>
-  </main>
+<section class="card">
+<h3>T.R.E.Y. OMEGA Simulation Layer</h3>
+<p>Physics-informed and lattice-oriented simulation framework for experimentation, simulation-to-principle extraction, and technical discovery workflows.</p>
+<a class="button" href="/whitepapers/t-r-e-y-omega-simulation-layer.html">Read paper</a>
+</section>
 
-  <footer>
-    © <span id="year"></span> Advanced Frontier Technologies · UEI: W2MEEUJACRJ3 · CAGE: 1ZV02. All rights reserved.
-    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-  </footer>
+<section class="card">
+<h3>Evidence-Controlled Deployment</h3>
+<p>AFT’s approach to Docker packaging, service manifests, checksums, ProofPackets, validation status, and public/private evidence separation.</p>
+<a class="button" href="/whitepapers/evidence-controlled-deployment.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>ProofPacket Evidence Architecture</h3>
+<p>Framework for organizing technical claims, prototype evidence, validation gaps, screenshots, logs, benchmarks, and partner-diligence materials.</p>
+<a class="button" href="/whitepapers/proofpacket-evidence-architecture.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Sovereign Edge Runtime Architecture</h3>
+<p>Local-first, edge-deployable runtime architecture for controlled AI, simulation, governance, and service orchestration.</p>
+<a class="button" href="/whitepapers/sovereign-edge-runtime-architecture.html">Read paper</a>
+</section>
+
+</div>
+
+<h2>Public Software &amp; DevOps</h2>
+<div class="grid">
+
+<section class="card">
+<h3>Public-Stack Repository Overview</h3>
+<p>Description of AFT’s public-safe GitHub repository, demo API, static site, whitepapers, governance endpoint, and Docker Compose examples.</p>
+<a class="button" href="/whitepapers/public-stack-repository-overview.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>AFT Docker/MCP Runtime Skeleton</h3>
+<p>Technical overview of the Docker/MCP routing model, service layout, local deployment structure, and reproducibility goals.</p>
+<a class="button" href="/whitepapers/aft-docker-mcp-runtime-skeleton.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Public-Safe Software Release Policy</h3>
+<p>Rules for what can and cannot be published publicly, including secrets, model weights, logs, binders, Docker archives, .env files, and private evidence.</p>
+<a class="button" href="/whitepapers/public-safe-software-release-policy.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Service Manifest and Restoration Workflow</h3>
+<p>How AFT packages services, images, volumes, manifests, hashes, and restore helpers for prototype preservation and diligence review.</p>
+<a class="button" href="/whitepapers/service-manifest-and-restoration-workflow.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>GitHub Pages Public Website Deployment</h3>
+<p>AFT’s static website publication approach using GitHub Pages, DNS, custom domain routing, and public documentation workflows.</p>
+<a class="button" href="/whitepapers/github-pages-public-website-deployment.html">Read paper</a>
+</section>
+
+</div>
+
+<h2>Agentic AI &amp; Governance</h2>
+<div class="grid">
+
+<section class="card">
+<h3>Governed Agentic AI Systems</h3>
+<p>Company-wide framework for safe, auditable, validation-first agentic systems.</p>
+<a class="button" href="/whitepapers/governed-agentic-ai-systems.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Agent Collaboration Beyond Chatbot Chains</h3>
+<p>Why AFT uses structured agent lattices instead of loosely connected prompt chains.</p>
+<a class="button" href="/whitepapers/agent-collaboration-beyond-chatbot-chains.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Discrete Lattice Coordination for Multi-Agent Systems</h3>
+<p>Conceptual basis for using discrete combinatorial structures to coordinate agents and preserve explainability.</p>
+<a class="button" href="/whitepapers/discrete-lattice-coordination-for-multi-agent-systems.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Agent State, Memory, and Evidence Boundaries</h3>
+<p>How AFT separates state, memory, reasoning traces, evidence, and public/private outputs.</p>
+<a class="button" href="/whitepapers/agent-state-memory-and-evidence-boundaries.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Human Oversight in High-Consequence Agentic Workflows</h3>
+<p>Human-in-the-loop and human-on-the-loop concepts for prototype, pilot, and regulated contexts.</p>
+<a class="button" href="/whitepapers/human-oversight-in-high-consequence-agentic-workflows.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Claim Governance for AI Outputs</h3>
+<p>AFT’s approach to separating hypothesis, prototype evidence, benchmark evidence, validated result, and certified claim.</p>
+<a class="button" href="/whitepapers/claim-governance-for-ai-outputs.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Paladin Priority Model</h3>
+<p>Explanation of priority ordering for correctness, IP, legal, safety, evidence, and operational boundaries.</p>
+<a class="button" href="/whitepapers/paladin-priority-model.html">Read paper</a>
+</section>
+
+</div>
+
+<h2>Simulation &amp; Science Discovery</h2>
+<div class="grid">
+
+<section class="card">
+<h3>Simulation-to-Principle Extraction</h3>
+<p>How AFT proposes converting simulation outputs into reusable principles, decision rules, and evidence-backed explanations.</p>
+<a class="button" href="/whitepapers/simulation-to-principle-extraction.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Lattice-Based Scientific Discovery Workflows</h3>
+<p>Use of lattice structures for hypothesis generation, simulation planning, and traceable discovery.</p>
+<a class="button" href="/whitepapers/lattice-based-scientific-discovery-workflows.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Physics-Informed Agentic Experimentation</h3>
+<p>Combining simulation tools, agentic reasoning, causal tracking, and governance controls.</p>
+<a class="button" href="/whitepapers/physics-informed-agentic-experimentation.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>OpenFOAM/GMSH-Inspired Simulation Workflows</h3>
+<p>Public-safe overview of CFD-style and mesh-based experimentation concepts.</p>
+<a class="button" href="/whitepapers/openfoam-gmsh-inspired-simulation-workflows.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Genesis/Lysis Modeling Concepts</h3>
+<p>Concept-stage description of formation, transformation, breakdown, and system-state evolution modeling.</p>
+<a class="button" href="/whitepapers/genesis-lysis-modeling-concepts.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Benchmarking Governed Agentic Systems</h3>
+<p>Metrics and evaluation pathways for collaboration quality, reproducibility, drift, causal traceability, and validation progress.</p>
+<a class="button" href="/whitepapers/benchmarking-governed-agentic-systems.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Entropy-Sieve Information Filtering</h3>
+<p>Conceptual paper on information filtering, signal extraction, and evidence selection within agentic systems.</p>
+<a class="button" href="/whitepapers/entropy-sieve-information-filtering.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Temporal Mechanics and State Evolution in Agent Lattices</h3>
+<p>Public-safe overview of time-aware state updates, event tracking, and dynamic reasoning.</p>
+<a class="button" href="/whitepapers/temporal-mechanics-and-state-evolution-in-agent-lattices.html">Read paper</a>
+</section>
+
+</div>
+
+<h2>Emergency Response &amp; Healthcare-Adjacent Concepts</h2>
+<div class="grid">
+
+<section class="card">
+<h3>Flying Triage Concept</h3>
+<p>Public-safe overview of AFT’s emergency-response and digital-twin concept direction.</p>
+<a class="button" href="/whitepapers/flying-triage-concept.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Emergency Response Digital Twin Framework</h3>
+<p>Modeling scene state, resources, triage flow, and response coordination under strict validation boundaries.</p>
+<a class="button" href="/whitepapers/emergency-response-digital-twin-framework.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Human-Supervised Triage Support Research</h3>
+<p>Research concept for assisting triage planning without claiming medical-device, clinical, or life-safety readiness.</p>
+<a class="button" href="/whitepapers/human-supervised-triage-support-research.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Responder Scene Intelligence Concepts</h3>
+<p>High-level overview of scene understanding, routing, alerts, and evidence-controlled situational modeling.</p>
+<a class="button" href="/whitepapers/responder-scene-intelligence-concepts.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Healthcare-Adjacent Simulation Boundaries</h3>
+<p>Clear separation between research simulations, decision-support prototypes, and regulated clinical systems.</p>
+<a class="button" href="/whitepapers/healthcare-adjacent-simulation-boundaries.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Validation Pathway for Emergency-Response AI Concepts</h3>
+<p>Steps needed before any emergency-response or healthcare-adjacent concept could move beyond prototype review.</p>
+<a class="button" href="/whitepapers/validation-pathway-for-emergency-response-ai-concepts.html">Read paper</a>
+</section>
+
+</div>
+
+<h2>Government &amp; Transition Readiness</h2>
+<div class="grid">
+
+<section class="card">
+<h3>AFT Public Capability Statement</h3>
+<p>Company overview, identifiers, technical focus areas, NAICS-style positioning, and contact information.</p>
+<a class="button" href="/whitepapers/aft-public-capability-statement.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Sovereign Systems for Government-Facing Research</h3>
+<p>Broad non-solicitation-specific paper on AFT’s relevance to sovereign AI, edge systems, simulation, and governed autonomy.</p>
+<a class="button" href="/whitepapers/sovereign-systems-for-government-facing-research.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Validation-First Government Transition Pathway</h3>
+<p>Prototype to technical diligence to controlled pilot to independent validation to procurement pathway.</p>
+<a class="button" href="/whitepapers/validation-first-government-transition-pathway.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Edge-Deployed Governed AI for Contested Environments</h3>
+<p>Public-safe overview of local-first AI/runtime concepts for degraded connectivity and sovereign operation.</p>
+<a class="button" href="/whitepapers/edge-deployed-governed-ai-for-contested-environments.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Build/Adapt/Sustain Software Architecture</h3>
+<p>Modular architecture for rapidly adapting software components while preserving governance and evidence controls.</p>
+<a class="button" href="/whitepapers/build-adapt-sustain-software-architecture.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Procurement Claim Boundary and Evidence Control</h3>
+<p>How AFT communicates readiness without implying approval, award, certification, endorsement, or operational validation.</p>
+<a class="button" href="/whitepapers/procurement-claim-boundary-and-evidence-control.html">Read paper</a>
+</section>
+
+</div>
+
+<h2>Partner / Investor Materials</h2>
+<div class="grid">
+
+<section class="card">
+<h3>AFT Company Technical Overview</h3>
+<p>Broad technical summary of AFT’s platforms, architecture, prototype evidence, and validation posture.</p>
+<a class="button" href="/whitepapers/aft-company-technical-overview.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Partner Discovery Brief</h3>
+<p>Overview for collaborators, labs, integrators, and strategic partners.</p>
+<a class="button" href="/whitepapers/partner-discovery-brief.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Investor Technical Diligence Brief</h3>
+<p>Public-safe explanation of what has been prototyped, what remains to validate, and what the company is building toward.</p>
+<a class="button" href="/whitepapers/investor-technical-diligence-brief.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Platform Roadmap and Milestone Framework</h3>
+<p>Product and research roadmap across Paladin, SMILEQT, T.R.E.Y. OMEGA, ProofPacket, Flying Triage, and Public-Stack.</p>
+<a class="button" href="/whitepapers/platform-roadmap-and-milestone-framework.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>AFT Intellectual Property Development Posture</h3>
+<p>Public-safe IP posture without claiming patent-secured status unless filings are verified.</p>
+<a class="button" href="/whitepapers/aft-intellectual-property-development-posture.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Commercialization Pathways for Governed Agentic Systems</h3>
+<p>Potential markets, transition paths, and validation requirements.</p>
+<a class="button" href="/whitepapers/commercialization-pathways-for-governed-agentic-systems.html">Read paper</a>
+</section>
+
+</div>
+
+<h2>Security, Safety &amp; Compliance</h2>
+<div class="grid">
+
+<section class="card">
+<h3>Public-Safe Repository Security Policy</h3>
+<p>What AFT prevents from entering public repos: keys, secrets, credentials, archives, .env, model weights, logs, and private records.</p>
+<a class="button" href="/whitepapers/public-safe-repository-security-policy.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Prototype Cybersecurity Boundary</h3>
+<p>Difference between local prototype security, production cybersecurity, compliance review, and authority-to-operate pathways.</p>
+<a class="button" href="/whitepapers/prototype-cybersecurity-boundary.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Evidence Handling and Redaction Policy</h3>
+<p>How AFT separates public materials, NDA materials, private binders, partner records, and regulated information.</p>
+<a class="button" href="/whitepapers/evidence-handling-and-redaction-policy.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Safety Case Development for Agentic Systems</h3>
+<p>Early structure for building safety cases around AI/agentic workflows.</p>
+<a class="button" href="/whitepapers/safety-case-development-for-agentic-systems.html">Read paper</a>
+</section>
+
+<section class="card">
+<h3>Responsible AI and Validation Controls</h3>
+<p>AFT’s company-wide responsible AI posture: human oversight, evidence boundaries, testing, auditability, and no unsupported claims.</p>
+<a class="button" href="/whitepapers/responsible-ai-and-validation-controls.html">Read paper</a>
+</section>
+
+</div>
+
+</main>
+<footer>
+© <span id="year"></span> Advanced Frontier Technologies · UEI: W2MEEUJACRJ3 · CAGE: 1ZV02. All rights reserved.
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</footer>
 </body>
 </html>

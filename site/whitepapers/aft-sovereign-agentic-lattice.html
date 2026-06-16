@@ -1,185 +1,144 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>AFT Sovereign Agentic Lattice | Advanced Frontier Technologies</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Public-safe AFT concept brief for the Sovereign Agentic Lattice architecture.">
-  <style>
-    :root {
-      --bg: #070b14;
-      --panel: #101827;
-      --text: #eef4ff;
-      --muted: #a8b3c7;
-      --line: #263247;
-      --accent: #67e8f9;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #070b14;
-      color: var(--text);
-      line-height: 1.65;
-    }
-    header, main, footer {
-      max-width: 980px;
-      margin: auto;
-      padding: 32px 20px;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      align-items: center;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 18px;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      margin-left: 16px;
-      font-size: 14px;
-    }
-    nav a:hover { color: var(--accent); }
-    h1 {
-      font-size: clamp(34px, 6vw, 58px);
-      line-height: 1.06;
-      margin: 42px 0 14px;
-    }
-    h2 {
-      margin-top: 42px;
-      border-top: 1px solid var(--line);
-      padding-top: 26px;
-    }
-    p, li { color: var(--muted); font-size: 17px; }
-    strong { color: var(--text); }
-    .meta, .notice {
-      border: 1px solid var(--line);
-      background: rgba(16, 24, 39, 0.78);
-      border-radius: 18px;
-      padding: 20px;
-      margin: 24px 0;
-    }
-    .notice {
-      background: rgba(255,255,255,0.04);
-      font-size: 15px;
-      color: var(--muted);
-    }
-    code {
-      color: var(--accent);
-      background: rgba(255,255,255,0.05);
-      padding: 2px 6px;
-      border-radius: 6px;
-    }
-    footer {
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 14px;
-    }
-  </style>
+<meta charset="utf-8">
+<title>AFT Sovereign Agentic Lattice | Advanced Frontier Technologies</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Governed 21-agent lattice architecture for structured multi-agent collaboration, state tracking, simulation linkage, and evidence-controlled reasoning.">
+
+<style>
+:root{--bg:#070b14;--panel:#101827;--text:#eef4ff;--muted:#a8b3c7;--line:#263247;--accent:#67e8f9}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#070b14;color:var(--text);line-height:1.65}
+header,main,footer{max-width:980px;margin:auto;padding:32px 20px}
+nav{display:flex;justify-content:space-between;gap:16px;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-size:14px}
+nav a:hover{color:var(--accent)}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.06;margin:42px 0 14px}
+h2{margin-top:42px;border-top:1px solid var(--line);padding-top:26px}
+p,li{color:var(--muted);font-size:17px}
+strong{color:var(--text)}
+.meta,.notice{border:1px solid var(--line);background:rgba(16,24,39,.78);border-radius:18px;padding:20px;margin:24px 0}
+.notice{background:rgba(255,255,255,.04);font-size:15px;color:var(--muted)}
+code{color:var(--accent);background:rgba(255,255,255,.05);padding:2px 6px;border-radius:6px}
+.button{display:inline-block;border:1px solid var(--accent);color:#07111f;background:var(--accent);padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:26px}
+.card{border:1px solid var(--line);background:rgba(16,24,39,.78);border-radius:18px;padding:20px}
+.tag{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:5px 10px;color:var(--muted);font-size:13px;margin:4px 6px 4px 0}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+</style>
+
 </head>
 <body>
-  <header>
-    <nav>
-      <div><strong>Advanced Frontier Technologies</strong></div>
-      <div>
-        <a href="/">Home</a>
-        <a href="/whitepapers/">Whitepapers</a>
-        <a href="/#contact">Contact</a>
-      </div>
-    </nav>
+<header>
+<nav>
+<div><strong>Advanced Frontier Technologies</strong></div>
+<div><a href="/">Home</a><a href="/whitepapers/">Whitepapers</a><a href="/#contact">Contact</a></div>
+</nav>
+<h1>AFT Sovereign Agentic Lattice</h1>
+<p>Governed 21-agent lattice architecture for structured multi-agent collaboration, state tracking, simulation linkage, and evidence-controlled reasoning.</p>
+<div class="meta">
+<p><strong>Category:</strong> Core Architecture</p>
+<p><strong>Organization:</strong> Advanced Frontier Technologies</p>
+<p><strong>Public posture:</strong> Prototype-backed · Validation-first · Evidence-controlled</p>
+<p><strong>Entity identifiers:</strong> UEI <code>W2MEEUJACRJ3</code> · CAGE <code>1ZV02</code></p>
+</div>
+</header>
+<main>
+<div class="notice">
+This paper is a public-safe company brief. It does not claim certified life-safety readiness,
+clinical readiness, procurement approval, production readiness, patent-secured status,
+government endorsement, operational validation, FedRAMP authorization, or authority to operate.
+Any regulated, operational, clinical, emergency-response, defense, or procurement-sensitive use
+would require independent validation, cybersecurity review, contractual authorization, and applicable certification.
+</div>
 
-    <h1>AFT Sovereign Agentic Lattice</h1>
-    <p>
-      Public-safe concept brief for governed multi-agent collaboration, simulation-driven discovery,
-      and evidence-controlled deployment.
-    </p>
+<h2>Executive Summary</h2>
+<p>
+AFT Sovereign Agentic Lattice is part of AFT's company-wide whitepaper library. Its purpose is to define the technical spine of AFT&#x27;s company-wide architecture
+while preserving a clear boundary between public demonstrations, private diligence materials,
+prototype evidence, and future validation work.
+</p>
+<p>
+The intended audience includes technical reviewers, partners, integrators, and diligence teams. This paper is written as a public-safe summary and
+should be read as a planning, architecture, and partner-discovery artifact rather than as a
+certification, procurement, or deployment claim.
+</p>
 
-    <div class="meta">
-      <p><strong>Organization:</strong> Advanced Frontier Technologies</p>
-      <p><strong>Principal Architect:</strong> Trevor Yohn, Founder & Systems Architect</p>
-      <p><strong>Entity Identifiers:</strong> UEI <code>W2MEEUJACRJ3</code> · CAGE <code>1ZV02</code></p>
-      <p><strong>Public Posture:</strong> Prototype-backed · Validation-first · Evidence-controlled</p>
-    </div>
-  </header>
+<h2>Problem Context</h2>
+<p>
+High-consequence technical systems require more than isolated demos. They require traceable
+architecture, reproducible evidence, governed claims, human-review boundaries, and a disciplined
+transition path from prototype to independently evaluated pilot. AFT's work is organized around
+that separation: what has been prototyped, what is being proposed, what remains unvalidated, and
+what evidence would be required before any sensitive deployment.
+</p>
 
-  <main>
-    <div class="notice">
-      This brief is a public-safe company concept summary. It does not imply government endorsement,
-      procurement approval, certification, clinical readiness, life-safety approval, production readiness,
-      patent-secured status, or operational validation.
-    </div>
+<h2>AFT Approach</h2>
+<p>
+AFT frames this topic through a prototype-backed, validation-first, evidence-controlled model.
+The approach emphasizes modular runtime components, public-safe documentation, reproducible
+examples, controlled language, and traceability across agentic, simulation, governance, and
+deployment workflows.
+</p>
+<ul>
+<li>Structured architecture review.</li><li>Runtime boundary definition.</li><li>Evidence mapping.</li><li>Controlled prototype iteration.</li>
+<li>Public/private evidence separation.</li>
+<li>Clear distinction between demonstration, pilot, validation, and certified deployment.</li>
+</ul>
 
-    <h2>Problem Statement</h2>
-    <p>
-      Current agentic AI systems often operate as loosely coordinated model chains rather than rigorously
-      governed, auditable, and reproducible collaboration systems. In high-consequence environments,
-      agentic workflows need stronger foundations for communication, state tracking, simulation linkage,
-      evidence preservation, and validation boundaries.
-    </p>
+<h2>Representative Architecture</h2>
+<p>
+Relevant AFT components may include SMILEQT Sovereign Lattice Runtime, Paladin Governance,
+T.R.E.Y. OMEGA simulation workflows, BrainV3 cause-effect reasoning, Evidence Locker concepts,
+ProofPacket-style documentation, Docker/MCP deployment skeletons, and the Public-Stack repository.
+Not every component is required for every use case; the purpose of the architecture is to keep
+capabilities modular, governable, and reviewable.
+</p>
 
-    <h2>AFT Proposed Direction</h2>
-    <p>
-      Advanced Frontier Technologies is developing the <strong>SMILEQT Sovereign Lattice Runtime</strong>,
-      integrated with <strong>Paladin Governance</strong> and the <strong>T.R.E.Y. OMEGA simulation layer</strong>.
-      The architecture is designed as a prototype-backed, validation-first, 21-agent discrete lattice system
-      for governed agent collaboration, simulation-driven principle extraction, and reproducible evidence packaging.
-    </p>
+<h2>Evidence and Validation Path</h2>
+<p>
+Public-facing evidence should remain limited to non-sensitive screenshots, demo endpoints,
+repository files, service summaries, whitepapers, and controlled descriptions. More detailed
+evidence, including logs, private binders, internal runtime packages, benchmark details, partner
+records, or proprietary implementation notes, should remain private or NDA-bound until reviewed.
+</p>
+<p>
+A mature validation path would include reproducible test cases, benchmark definitions, independent
+review, cybersecurity review, human-oversight procedures, risk analysis, and domain-specific
+certification where applicable.
+</p>
 
-    <h2>Core Components</h2>
-    <ul>
-      <li><strong>SMILEQT Sovereign Lattice Runtime:</strong> Structured multi-agent coordination for role separation, state tracking, and traceable reasoning.</li>
-      <li><strong>Paladin Governance:</strong> Oversight layer for priority handling, evidence controls, policy boundaries, and safety posture.</li>
-      <li><strong>T.R.E.Y. OMEGA Simulation Layer:</strong> Physics-informed and lattice-oriented simulation workflows for experimentation and principle extraction.</li>
-      <li><strong>BrainV3 Cause-Effect Reasoning:</strong> Causal reasoning support for hypothesis tracking and system-state interpretation.</li>
-      <li><strong>Docker/MCP Deployment Skeleton:</strong> Modular local-first deployment model for reproducible service packaging and transition experiments.</li>
-    </ul>
+<h2>Risks and Boundaries</h2>
+<ul>
+<li>Prototype demonstrations should not be presented as production systems.</li>
+<li>Research concepts should not be presented as certified emergency-response, clinical, or life-safety tools.</li>
+<li>Government-facing language should not imply award, approval, endorsement, or procurement status.</li>
+<li>Benchmark language should remain qualified unless independently verified.</li>
+<li>Private infrastructure details, credentials, logs, raw paths, customer data, partner records, and sensitive archives should not be published.</li>
+</ul>
 
-    <h2>Company-Wide Use Cases</h2>
-    <ul>
-      <li>Governed agentic AI research and orchestration</li>
-      <li>Simulation-driven technical discovery</li>
-      <li>Emergency-response concept modeling</li>
-      <li>Healthcare-adjacent digital-twin research boundaries</li>
-      <li>Evidence-controlled partner diligence</li>
-      <li>Public-safe software demonstrations</li>
-      <li>Edge-deployable prototype planning</li>
-    </ul>
+<h2>Recommended Next Steps</h2>
+<ul>
+<li>Maintain this paper as a public-safe overview.</li>
+<li>Use private ProofPacket materials for deeper diligence when appropriate.</li>
+<li>Define validation milestones before pilot claims.</li>
+<li>Keep GitHub, website, and partner materials aligned with the same claim boundary.</li>
+</ul>
 
-    <h2>Existing Prototype Evidence</h2>
-    <p>
-      AFT has assembled a local Docker-based prototype environment and a public-safe software repository that
-      demonstrate a company site, public demo API, governance/status endpoint, 21-agent lattice demonstration,
-      evidence pipeline service, simulation stub, and reproducible service packaging workflow.
-    </p>
-
-    <p>
-      Public-safe repository: <code>trev-AdvancedFrontierTechnologies/Public-Stack</code>
-    </p>
-
-    <h2>Risk Boundary</h2>
-    <p>
-      All claims are prototype-backed and validation-first. AFT does not claim that the current system is certified,
-      production-ready, clinically ready, life-safety approved, procurement approved, patent-secured, or operationally
-      validated. Full validation, independent benchmarking, cybersecurity review, and certification would be required
-      prior to any regulated, operational, clinical, emergency-response, or procurement-sensitive deployment.
-    </p>
-
-    <h2>Point of Contact</h2>
-    <p>
-      <strong>Trevor Yohn</strong><br>
-      Founder & Systems Architect<br>
-      Advanced Frontier Technologies<br>
-      <strong>Email:</strong> trev@smileqt.com<br>
-      <strong>General Contact:</strong> contact@advancedfrontiertechnologies.com
-    </p>
-  </main>
-
-  <footer>
-    © <span id="year"></span> Advanced Frontier Technologies · UEI: W2MEEUJACRJ3 · CAGE: 1ZV02. All rights reserved.
-    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-  </footer>
+<h2>Point of Contact</h2>
+<p>
+<strong>Trevor Yohn</strong><br>
+Founder & Systems Architect<br>
+Advanced Frontier Technologies<br>
+<strong>Email:</strong> trev@smileqt.com<br>
+<strong>General Contact:</strong> contact@advancedfrontiertechnologies.com
+</p>
+<p><a class="button" href="/whitepapers/">Back to whitepapers</a></p>
+</main>
+<footer>
+© <span id="year"></span> Advanced Frontier Technologies · UEI: W2MEEUJACRJ3 · CAGE: 1ZV02. All rights reserved.
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</footer>
 </body>
 </html>
